@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds styles: With child styles 1`] = `
+<DocumentFragment>
+  <span
+    style="border: 0px; height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; position: absolute; text-align: center;"
+  >
+    Foo
+  </span>
+</DocumentFragment>
+`;
+
+exports[`adds styles: Without child styles 1`] = `
+<DocumentFragment>
+  <span
+    style="border: 0px; height: 1px; width: 1px; margin: -1px; padding: 0px; overflow: hidden; position: absolute;"
+  >
+    Foo
+  </span>
+</DocumentFragment>
+`;

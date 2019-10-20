@@ -1,9 +1,8 @@
-/* jest */
-// import React from 'react'
-// import {renderHook} from '@testing-library/react-hooks'
-// import {render} from '@testing-library/react'
-const hello = world => `hello ${world}`
+import React from 'react'
+import {render} from '@testing-library/react'
+import VisuallyHidden from './index'
 
-test('passes', () => {
-  expect(hello('world')).toMatchSnapshot()
+test('adds styles', () => {
+  expect(render(<VisuallyHidden><span>Foo</span></VisuallyHidden>).asFragment()).toMatchSnapshot('Without child styles')
+  expect(render(<VisuallyHidden><span style={{textAlign: 'center'}}>Foo</span></VisuallyHidden>).asFragment()).toMatchSnapshot('With child styles')
 })

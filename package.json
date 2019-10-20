@@ -1,15 +1,19 @@
 {
   "name": "@accessible/visually-hidden",
   "version": "1.0.0",
-  "homepage": "https://github.com/jaredLunde/accessible#readme",
-  "repository": "github:jaredLunde/accessible",
-  "bugs": "https://github.com/jaredLunde/accessible/issues",
+  "homepage": "https://github.com/jaredLunde/accessible-visually-hidden#readme",
+  "repository": "github:jaredLunde/accessible-visually-hidden",
+  "bugs": "https://github.com/jaredLunde/accessible-visually-hidden/issues",
   "author": "Jared Lunde <jared@BeStellar.co> (https://jaredLunde.com)",
   "license": "MIT",
   "description": "A React component for adding visually hidden styles to elements",
   "keywords": [
     "react",
     "react component",
+    "a11y",
+    "aria",
+    "accessibility",
+    "accessible",
     "visually hidden"
   ],
   "main": "dist/cjs/index.js",
@@ -65,5 +69,8 @@
     "rimraf": "^2.6.3"
   },
   "dependencies": {},
-  "peerDependencies": {}
+  "peerDependencies": {
+    "prop-types": ">=15.6",
+    "react": ">=16"
+  }
 }
