@@ -22,7 +22,7 @@ const VisuallyHidden = ({children}) => {
 if (__DEV__) {
   const PropTypes = require('prop-types')
   VisuallyHidden.propTypes = {
-    children: PropTypes.element.isRequired
+    children: PropTypes.element.isRequired,
   }
 }
 

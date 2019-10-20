@@ -16,6 +16,7 @@ A React component for adding visually hidden styles to elements
 #### `yarn add @accessible/visually-hidden`
 
 ## Usage
+
 Simply wrap a child element that accepts a `style` prop and this component will add visually hidden
 styles to it without overwriting styles already present on the child.
 
@@ -24,7 +25,7 @@ import VisuallyHidden from '@accessible/visually-hidden'
 
 export default props => (
   <VisuallyHidden>
-    <input type='checkbox' {...props}/>
+    <input type="checkbox" {...props} />
   </VisuallyHidden>
 )
 // <input type='checkbox' style='...'/>
