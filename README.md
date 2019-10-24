@@ -1,7 +1,7 @@
-[![bundlephobia](https://img.shields.io/bundlephobia/minzip/@accessible/visually-hidden?style=plastic)](https://bundlephobia.com/result?p=@accessible/visually-hidden)
-[![codecov](https://codecov.io/gh/jaredLunde/accessible-visually-hidden/branch/master/graph/badge.svg)](https://codecov.io/gh/jaredLunde/accessible-visually-hidden)
-[![Build Status](https://travis-ci.org/jaredLunde/accessible-visually-hidden.svg?branch=master)](https://travis-ci.org/jaredLunde/accessible-visually-hidden)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://jaredlunde.mit-license.org/)
+[![Bundlephobia](https://img.shields.io/bundlephobia/minzip/@accessible/visually-hidden?style=for-the-badge)](https://bundlephobia.com/result?p=@accessible/visually-hidden)
+[![Code coverage](https://img.shields.io/codecov/c/gh/jaredLunde/accessible-visually-hidden?style=for-the-badge)](https://codecov.io/gh/jaredLunde/accessible-visually-hidden)
+[![Build status](https://img.shields.io/travis/jaredLunde/accessible-visually-hidden?style=for-the-badge)](https://travis-ci.org/jaredLunde/accessible-visually-hidden)
+[![License](https://img.shields.io/github/license/jaredLunde/accessible-visually-hidden?style=for-the-badge)](https://jaredlunde.mit-license.org/)
 
 ---
 
