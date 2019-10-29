@@ -1,21 +1,36 @@
-[![Bundlephobia](https://img.shields.io/bundlephobia/minzip/@accessible/visually-hidden?style=for-the-badge)](https://bundlephobia.com/result?p=@accessible/visually-hidden)
-[![Code coverage](https://img.shields.io/codecov/c/gh/jaredLunde/accessible-visually-hidden?style=for-the-badge)](https://codecov.io/gh/jaredLunde/accessible-visually-hidden)
-[![Build status](https://img.shields.io/travis/jaredLunde/accessible-visually-hidden?style=for-the-badge)](https://travis-ci.org/jaredLunde/accessible-visually-hidden)
-[![License](https://img.shields.io/github/license/jaredLunde/accessible-visually-hidden?style=for-the-badge)](https://jaredlunde.mit-license.org/)
+<hr>
+<div align="center">
+  <h1 align="center">
+    @accessible/visually-hidden
+  </h1>
+</div>
 
----
+<p align="center">
+  <a href="https://bundlephobia.com/result?p=@accessible/visually-hidden">
+    <img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/@accessible/visually-hidden?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="Code coverage report" href="https://codecov.io/gh/jaredLunde/accessible-visually-hidden">
+    <img alt="Code coverage" src="https://img.shields.io/codecov/c/gh/jaredLunde/accessible-visually-hidden?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="Build status" href="https://travis-ci.org/jaredLunde/accessible-visually-hidden">
+    <img alt="Build status" src="https://img.shields.io/travis/jaredLunde/accessible-visually-hidden?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/@accessible/visually-hidden">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/@accessible/visually-hidden?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="License" href="https://jaredlunde.mit-license.org/">
+    <img alt="MIT License" src="https://img.shields.io/npm/l/@accessible/visually-hidden?style=for-the-badge&labelColor=24292e">
+  </a>
+</p>
 
-# @accessible/visually-hidden
+<pre align="center">
+  npm i @accessible/visually-hidden
+</pre>
+<hr>
 
 A React component for adding visually hidden styles to elements
 
-## Installation
-
-#### `npm i @accessible/visually-hidden`
-
-#### `yarn add @accessible/visually-hidden`
-
-## Usage
+## Quick Start
 
 Simply wrap a child element that accepts a `style` prop and this component will add visually hidden
 styles to it without overwriting styles already present on the child.
