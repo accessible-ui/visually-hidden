@@ -23,11 +23,7 @@
   </a>
 </p>
 
-<pre align="center">
-
-  npm i @accessible/visually-hidden
-  
-</pre>
+<pre align="center">npm i @accessible/visually-hidden</pre>
 <hr>
 
 A React component for adding visually hidden styles to elements
