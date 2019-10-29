@@ -24,7 +24,9 @@
 </p>
 
 <pre align="center">
+
   npm i @accessible/visually-hidden
+  
 </pre>
 <hr>
 
