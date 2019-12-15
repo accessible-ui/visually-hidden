@@ -1,7 +1,7 @@
 <hr>
 <div align="center">
   <h1 align="center">
-    @accessible/visually-hidden
+    &lt;VisuallyHidden&gt;
   </h1>
 </div>
 
