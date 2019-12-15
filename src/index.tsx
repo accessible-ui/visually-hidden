@@ -1,5 +1,8 @@
 import React from 'react'
 
+const __DEV__ =
+  typeof process !== 'undefined' && process.env.NODE_ENV !== 'production'
+
 export const visuallyHidden = {
   border: 0,
   clip: 'rect(0 0 0 0)',
@@ -11,7 +14,11 @@ export const visuallyHidden = {
   position: 'absolute',
 }
 
-const VisuallyHidden = ({children}) => {
+export interface VisuallyHiddenProps {
+  children: React.ReactElement | JSX.Element
+}
+
+const VisuallyHidden: React.FC<VisuallyHiddenProps> = ({children}) => {
   const props = Object.assign({}, children.props)
   props.style = props.style
     ? Object.assign({}, visuallyHidden, props.style)
@@ -20,10 +27,7 @@ const VisuallyHidden = ({children}) => {
 }
 
 if (__DEV__) {
-  const PropTypes = require('prop-types')
-  VisuallyHidden.propTypes = {
-    children: PropTypes.element.isRequired,
-  }
+  VisuallyHidden.displayName = 'VisuallyHidden'
 }
 
 export default VisuallyHidden

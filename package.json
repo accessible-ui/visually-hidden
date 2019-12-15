@@ -1,12 +1,12 @@
 {
   "name": "@accessible/visually-hidden",
-  "version": "1.0.1",
-  "homepage": "https://github.com/jaredLunde/accessible-visually-hidden#readme",
-  "repository": "github:jaredLunde/accessible-visually-hidden",
-  "bugs": "https://github.com/jaredLunde/accessible-visually-hidden/issues",
-  "author": "Jared Lunde <jared@BeStellar.co> (https://jaredLunde.com)",
+  "version": "1.0.2",
+  "homepage": "https://github.com/accessible-ui/visually-hidden#readme",
+  "repository": "github:accessible-ui/visually-hidden",
+  "bugs": "https://github.com/accessible-ui/visually-hidden/issues",
+  "author": "Jared Lunde <jared.lunde@gmail.com> (https://jaredLunde.com)",
   "license": "MIT",
-  "description": "A React component for adding visually hidden styles to elements",
+  "description": "",
   "keywords": [
     "react",
     "react component",
@@ -14,7 +14,8 @@
     "aria",
     "accessibility",
     "accessible",
-    "visually hidden"
+    "visually hidden",
+    "visually hidden component"
   ],
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
@@ -23,22 +24,24 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "npm run build:cjs && npm run build:es",
-    "build:cjs": "babel src -d dist/cjs -x .js --ignore \"**/*.test.js\",\"**/test.js\" --delete-dir-on-start",
-    "build:es": "cross-env BABEL_ENV=es babel src -d dist/es -x .js --ignore \"**/*.test.js\",\"**/test.js\" --delete-dir-on-start",
-    "format": "prettier --write \"**/*.{js,jsx,md,yml,json,babelrc,eslintrc,prettierrc}\"",
-    "lint": "eslint .",
+    "build": "npm run build:cjs && npm run build:es && npm run build:types",
+    "build:cjs": "babel src -d dist/cjs -x .ts,.tsx --ignore \"**/*.test.ts\",\"**/test.ts\",\"**/*.test.tsx\",\"**/test.tsx\" --delete-dir-on-start",
+    "build:es": "cross-env BABEL_ENV=es babel src -d dist/es -x .ts,.tsx --ignore \"**/*.test.ts\",\"**/test.ts\",\"**/*.test.tsx\",\"**/test.tsx\" --delete-dir-on-start",
+    "build:types": "tsc -p tsconfig.json -d --outDir dist/es --emitDeclarationOnly && mkdir -p dist/cjs && cp -R dist/es/**.d.ts dist/cjs && rimraf dist/**/*.test.d.ts",
+    "check-types": "tsc --noEmit -p tsconfig.json",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,yml,json,babelrc,eslintrc,prettierrc}\"",
+    "lint": "eslint . --ext .ts,.tsx",
     "prepublishOnly": "npm run lint && npm run test && npm run build && npm run format",
     "test": "jest",
-    "validate": "npm run lint && npm run test -- --coverage"
+    "validate": "npm run check-types && npm run lint && npm run test -- --coverage"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run build:types"
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx}": [
+    "**/*.{ts,tsx,js,jsx}": [
       "eslint",
       "prettier --write"
     ],
@@ -52,7 +55,13 @@
     "@testing-library/jest-dom": "latest",
     "@testing-library/react": "latest",
     "@testing-library/react-hooks": "latest",
-    "babel-eslint": "latest",
+    "@types/jest": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "babel-plugin-optimize-react": "^0.0.4",
+    "babel-plugin-typescript-to-proptypes": "^1.1.0",
     "cross-env": "latest",
     "eslint": "latest",
     "eslint-import-resolver-jest": "latest",
@@ -66,7 +75,9 @@
     "react": "latest",
     "react-dom": "latest",
     "react-test-renderer": "latest",
-    "rimraf": "^2.6.3"
+    "rimraf": "^2.6.3",
+    "ts-jest": "latest",
+    "typescript": "latest"
   },
   "dependencies": {},
   "peerDependencies": {
