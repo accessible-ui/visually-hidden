@@ -39,7 +39,7 @@ styles to it without overwriting styles already present on the child.
 ```jsx harmony
 import VisuallyHidden from '@accessible/visually-hidden'
 
-export default props => (
+export default (props) => (
   <VisuallyHidden>
     <input type="checkbox" {...props} />
   </VisuallyHidden>

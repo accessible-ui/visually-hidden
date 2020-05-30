@@ -1,7 +1,10 @@
-import React from 'react'
+import * as React from 'react'
 
-const __DEV__ =
-  typeof process !== 'undefined' && process.env.NODE_ENV !== 'production'
+const VisuallyHidden: React.FC<VisuallyHiddenProps> = ({children}) =>
+  React.cloneElement(children, {
+    ...children.props,
+    style: {...visuallyHidden, ...children.props.style},
+  })
 
 export const visuallyHidden = {
   border: 0,
@@ -18,15 +21,7 @@ export interface VisuallyHiddenProps {
   children: React.ReactElement | JSX.Element
 }
 
-const VisuallyHidden: React.FC<VisuallyHiddenProps> = ({children}) => {
-  const props = Object.assign({}, children.props)
-  props.style = props.style
-    ? Object.assign({}, visuallyHidden, props.style)
-    : visuallyHidden
-  return React.cloneElement(children, props)
-}
-
-if (__DEV__) {
+if (typeof process !== 'undefined' && process.env.NODE_ENV !== 'production') {
   VisuallyHidden.displayName = 'VisuallyHidden'
 }
 
