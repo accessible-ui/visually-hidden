@@ -37,11 +37,13 @@ Simply wrap a child element that accepts a `style` prop and this component will 
 styles to it without overwriting styles already present on the child.
 
 ```jsx harmony
-import VisuallyHidden from '@accessible/visually-hidden'
+// VisuallyHidden is the component
+// visuallyHidden is a style object
+import {VisuallyHidden, visuallyHidden} from '@accessible/visually-hidden'
 
 export default (props) => (
   <VisuallyHidden>
-    <input type="checkbox" {...props} />
+    <input type='checkbox' {...props} />
   </VisuallyHidden>
 )
 // <input type='checkbox' style='...'/>
